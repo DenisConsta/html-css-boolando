@@ -19,6 +19,7 @@
 /* GENERAL */
 
 body{
+  padding-top: 75px;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
@@ -26,11 +27,18 @@ body{
 /* HEADER */
 
 header{
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  top: 0;
+  left: 0;
   background-color: #FF6900;
   height: 75px;
   width: 100%;
   color: white;
 }
+
+
 
 header>div {
   display: flex;
@@ -50,6 +58,11 @@ header nav ul li a{
   font-weight: 600;
 }
 
+header nav ul li a:hover{
+  text-decoration: underline;
+}
+
+
 header .logo img{
   height: 30px;
 }
@@ -59,7 +72,12 @@ header .icons{
 }
 
 header .icons i{
+  cursor: pointer;
   margin-left: 10px;
+}
+
+header .icons i:hover{
+  color:black;
 }
 
 
@@ -69,25 +87,93 @@ main{
   padding: 50px 0;
 }
 
-main div .row{
+main .row{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
 }
 
-main div .row .card{
+main .row .card{
+  cursor: pointer;
   display: inline-block;
-  background-color: crimson;
   height: 730px;
-  width: 440px
 }
 
-main div .row .card .card-img{
-  background-color: greenyellow;
-  height: 640px;
- 
+main .row .card .card-img{
+  position: relative;
+  top: 0;
+  left: 0;
 } 
+
+main .row .card .card-img img{ 
+  height: 640px;
+  object-fit: cover;
+}
+
+main .row .card .card-img .img-2{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+main .row .card:hover .img-2{
+  display: block;
+}
+
+main .row .card .card-img .discount,
+ .soste,
+ .heart{
+  position: absolute;
+  color: white;
+  padding: 5px 10px;
+  font-weight: 600;
+}
+
+main .row .card .card-img .discount{
+  left: 0;
+  bottom: 30px;
+  background-color: red;
+}
+
+main .row .card .card-img .soste{
+  left: 60px;
+  bottom: 30px;
+  background-color: green;
+
+}
+
+main .row .card .card-img .heart{
+  top: 10px;
+  right: 0px;
+  padding: 5px 15px;
+  background-color: white;
+  color: black;
+  font-size: 30px;
+}
+
+main .row .card .card-text .brand{
+  font-weight: smaller;
+  font-size: 14px;
+}
+
+main .row .card .card-text .name-object{
+  text-transform: uppercase;
+}
+
+main .row .card .card-text .price{
+  font-size: 14px;
+  font-weight: bolder;
+}
+
+main .row .card .card-text .price span:first-child{
+  color: red;
+}
+
+main .row .card .card-text .price span:last-child{
+  text-decoration: line-through;
+}
 
 /* FOOTER */
 
