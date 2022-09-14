@@ -16,13 +16,52 @@
   background-color: bisque;
 }
 
+/* GENERAL */
+
+body{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+
 /* HEADER */
 
 header{
   background-color: #FF6900;
   height: 75px;
   width: 100%;
+  color: white;
 }
+
+header>div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav ul{
+  display: flex;
+  gap: 10px;
+  list-style: none
+}
+
+header nav ul li a{
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+header .logo img{
+  height: 30px;
+}
+
+header .icons{
+  font-size: 20px;
+}
+
+header .icons i{
+  margin-left: 10px;
+}
+
 
 /* MAIN */
 
@@ -33,9 +72,12 @@ main{
 main div .row{
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
 }
 
 main div .row .card{
+  display: inline-block;
   background-color: crimson;
   height: 730px;
   width: 440px
@@ -46,7 +88,6 @@ main div .row .card .card-img{
   height: 640px;
  
 } 
-
 
 /* FOOTER */
 
