@@ -153,6 +153,21 @@ main .row .card .card-img .heart{
   font-size: 30px;
 }
 
+main .row .card:nth-child(5) .discount,
+.card:nth-child(6) .discount{
+  display: none;
+}
+
+main .row .card:last-child .soste{
+  left: 0;
+}
+
+main .row .card:nth-child(2) .soste, 
+.card:nth-child(3) .soste,
+.card:nth-child(5) .soste{
+  display: none;
+}
+
 main .row .card .card-text .brand{
   font-weight: smaller;
   font-size: 14px;
